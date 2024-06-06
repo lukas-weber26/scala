@@ -1,0 +1,19 @@
+object TrueRing {
+  def rule = println("To rule them all")
+}
+TrueRing.rule
+
+class Person(val name: String) {
+  def talk(message: String) = println(name + " says " + message)
+}
+
+class Employee(override val name: String, val number : Int) extends Person(name) {
+  //kind of odd that you just override the whole contructore like that but i guess it makes sense 
+  override def talk(message: String) {
+    println(name + " with number " + number + " says " + message)
+  }
+  override def id():String = number.toString
+}
+
+val employee = new Employee("Yoda",4)
+employee.talk("oooga booga")

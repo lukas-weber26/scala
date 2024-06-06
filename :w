@@ -1,0 +1,14 @@
+val lines = scala.io.Source.fromFile("map.txt").mkString.split("\n").map(i => Map(i(1) -> i(2)))
+
+//val l = List(1,2,3)
+//val sum = (0 /: l) {(sum,i) => {sum + i}}
+
+def combine(head:Map[String,String],tail:Map[String,String]) {
+  val next = head++tail
+  println(next)
+}
+
+lines.foreach({lines => println(lines)})
+//val sum = (Map() /: lines) {(sum,i) => {println(sum); println(i); return sum}}
+
+//println(lines(0)++lines(1))
